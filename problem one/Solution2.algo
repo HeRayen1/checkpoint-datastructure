@@ -1,0 +1,22 @@
+ALGORITHM solution1
+VAR
+    tab1 , tab2 :ARRAY_OF INTEGER;
+    sum , x, y :INTEGER ;
+BEGIN
+    sum = 0;
+    FOR x FROM 0 TO tab1.length - 1 STEP 1  DO
+        FOR y FROM 0 TO tab2.length - 1 STEP 1  DO
+            IF (tab1[x] = tab2[y]) THEN
+                sum += tab1[x];
+            END_IF
+        END_FOR
+    END_FOR
+    FOR  y FROM 0 TO tab2.length -1 STEP 1  DO
+        FOR x FROM 0 TO tab1.length -1 STEP 1  DO
+            IF (tab2[y] = tab1[x]) THEN
+                sum += tab2[y]
+            END_IF
+        END_FOR
+    END_FOR
+
+END
